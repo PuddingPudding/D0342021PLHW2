@@ -9,8 +9,8 @@ public class SortableInt implements Comparable {
 	}
 	
 	@Override
-	public int compareTo(Comparable input) {
-		// TODO Auto-generated method stub
+	public int compareTo(Comparable input) 
+	{
 		if(input == null || this.getClass() != input.getClass() )
 		{
 			return Comparable.ERROR;
@@ -28,9 +28,13 @@ public class SortableInt implements Comparable {
 			}
 			else
 			{
-				return Comparable.ERROR;
+				return Comparable.SMALLER;
 			}
 		}
 	}
 
+	public String toString()
+	{
+		return "" + this.value;
+	}
 }

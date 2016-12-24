@@ -2,28 +2,28 @@
 public class SelectionSort implements SortStrategy {
 
 	@Override
-	public Comparable[] sort(Comparable[] input) {		
+	public void sort(Comparable[] input) 
+	{		
 		for(int i = 0 ;i < input.length ; i++)
 		{
 			for(int j = i+1 ; j < input.length ; j++)
 			{
-				if(input[i].compareTo(input[j]) == Comparable.SMALLER)
+				if(input[i].compareTo(input[j]) == Comparable.BIGGER)
 				{
 					Comparable temp = input[i];
 					input[i] = input[j];
-					input[j] = input[i];
+					input[j] = temp;
 				}
 			}			
 		}		
-		return input;
 	}
 
 	@Override
 	public Comparable[] getSortResult(Comparable[] input) 
 	{
 		Comparable[] output = input.clone();
-			
-		return sort(output);
+		this.sort(output);
+		return output;
 	}
 
 }
