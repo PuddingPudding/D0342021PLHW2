@@ -1,21 +1,27 @@
 
 public class SelectionSort implements SortStrategy {
 
+	int totalTimes = 0;
 	@Override
 	public void sort(Comparable[] input) 
 	{		
-		for(int i = 0 ;i < input.length ; i++)
+		boolean switchFlag = true; //在這一輪檢查中，是否有出現交換的動作
+		for(int i = 0 ;i < input.length && switchFlag ; i++)
 		{
+			switchFlag = false;
 			for(int j = i+1 ; j < input.length ; j++)
 			{
+				totalTimes++;
 				if(input[i].compareTo(input[j]) == Comparable.BIGGER)
 				{
 					Comparable temp = input[i];
 					input[i] = input[j];
 					input[j] = temp;
+					switchFlag = true;
 				}
-			}			
-		}		
+			}
+		}
+		System.out.println(totalTimes);
 	}
 
 	@Override

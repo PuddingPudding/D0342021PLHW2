@@ -3,7 +3,7 @@ public class ClientTest
 {
 	public static void main(String args[])
 	{
-		Comparable[] array = new SortableInt[10];
+		Comparable[] array = new SortableInt[30];
 		for(int i = 0; i < array.length; i++)
 		{
 			array[i] = new SortableInt();
@@ -13,15 +13,20 @@ public class ClientTest
 		SortArray SA = new SortArray();
 		SA.setArray(array);
 		SA.setSortStrategy(new SelectionSort() );
-		SA.sort();
+		array = SA.getSortResult();
+		System.out.println("選擇排序法之結果");
 		for(int i = 0; i < array.length ; i++)
 		{
 			System.out.print(array[i] + " ");
 		}
 		System.out.println();
+		
+		SA.setSortStrategy(new QuickSort() );
+		array = SA.getSortResult();
+		System.out.println("快速排序法之結果");
 		for(int i = 0; i < array.length ; i++)
 		{
-			System.out.print(SA.getArray()[i] + " ");
+			System.out.print(array[i] + " ");
 		}
 	}
 }
