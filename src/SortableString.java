@@ -14,6 +14,11 @@ public class SortableString implements Comparable {
 		}
 	}
 	
+	public SortableString(String input)
+	{
+		this.string = input;
+	}
+	
 	@Override
 	public int compareTo(Comparable input) {
 		// TODO Auto-generated method stub
