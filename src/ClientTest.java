@@ -32,7 +32,7 @@ public class ClientTest
 		}
 		
 		Comparable test = new SortableInt(42);
-		SA.setSearchStrategy(new SequentialSearch() );
+		SA.setSearchStrategy(new BinarySearch() );
 		System.out.println(SA.search(test) );
 	}
 }
