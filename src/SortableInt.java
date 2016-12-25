@@ -8,6 +8,11 @@ public class SortableInt implements Comparable {
 		this.value = new Random().nextInt(100);
 	}
 	
+	public SortableInt(int input)
+	{
+		this.value = input;
+	}
+	
 	@Override
 	public int compareTo(Comparable input) 
 	{

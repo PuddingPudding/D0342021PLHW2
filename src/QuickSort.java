@@ -37,7 +37,7 @@ public class QuickSort implements SortStrategy
 			Comparable temp = input[i];
 			input[i] = input[left];
 			input[left] = temp;
-			this.quickSort(input, 0 , i-1);
+			this.quickSort(input, left , i-1);
 			this.quickSort(input, i+1 , right);
 		}
 	}
