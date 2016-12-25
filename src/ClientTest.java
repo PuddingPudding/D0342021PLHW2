@@ -3,7 +3,7 @@ public class ClientTest
 {
 	public static void main(String args[])
 	{
-		Comparable[] array = new SortableInt[10];
+		Comparable[] array = new SortableInt[30];
 		for(int i = 0; i < array.length; i++)
 		{
 			array[i] = new SortableInt();
@@ -30,5 +30,9 @@ public class ClientTest
 		{
 			System.out.print(array[i] + " ");
 		}
+		
+		Comparable test = new SortableInt(42);
+		SA.setSearchStrategy(new SequentialSearch() );
+		System.out.println(SA.search(test) );
 	}
 }

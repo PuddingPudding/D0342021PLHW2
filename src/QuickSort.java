@@ -45,7 +45,8 @@ public class QuickSort implements SortStrategy
 	@Override
 	public void sort(Comparable[] input) {
 		this.quickSort(input, 0 , input.length-1);
-		System.out.println(totalTimes);
+		System.out.println("快速排序法之掃描次數: " + totalTimes);
+		totalTimes = 0;
 	}
 
 	@Override

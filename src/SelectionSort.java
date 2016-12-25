@@ -21,7 +21,8 @@ public class SelectionSort implements SortStrategy {
 				}
 			}
 		}
-		System.out.println(totalTimes);
+		System.out.println("選擇排序法之掃描次數: " + totalTimes);
+		totalTimes = 0;
 	}
 
 	@Override
