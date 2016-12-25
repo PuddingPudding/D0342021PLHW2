@@ -41,4 +41,17 @@ public class SortArray
 		System.out.println("已完成搜尋前的排序動作");
 		return this.searchStrategy.search(this.array , input);
 	}
+	
+	public void printScanTimes()
+	{
+		System.out.println(this.sortStrategy.getScanTime() );
+	}
+	
+	public void printArray()
+	{
+		for(int i = 0; i < array.length ; i++)
+		{
+			System.out.print(array[i] + " ");
+		}
+	}
 }

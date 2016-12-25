@@ -3,10 +3,10 @@ public class ClientTest
 {
 	public static void main(String args[])
 	{
-		Comparable[] array = new SortableInt[30];
+		Comparable[] array = new SortableString[30];
 		for(int i = 0; i < array.length; i++)
 		{
-			array[i] = new SortableInt();
+			array[i] = new SortableString();
 			System.out.print(array[i] + " ");
 		}
 		
@@ -22,7 +22,7 @@ public class ClientTest
 			System.out.print(array[i] + " ");
 		}
 		System.out.println();
-		
+				
 		SA.setSortStrategy(new QuickSort() );
 		array = SA.getSortResult();
 		System.out.println("快速排序法之結果");
@@ -31,8 +31,6 @@ public class ClientTest
 			System.out.print(array[i] + " ");
 		}
 		
-		Comparable test = new SortableInt(42);
-		SA.setSearchStrategy(new BinarySearch() );
-		System.out.println(SA.search(test) );
+		System.out.println();
 	}
 }

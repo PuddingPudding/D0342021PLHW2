@@ -5,6 +5,7 @@ public class SelectionSort implements SortStrategy {
 	@Override
 	public void sort(Comparable[] input) 
 	{		
+		totalTimes = 0;
 		boolean switchFlag = true; //在這一輪檢查中，是否有出現交換的動作
 		for(int i = 0 ;i < input.length && switchFlag ; i++)
 		{
@@ -21,8 +22,6 @@ public class SelectionSort implements SortStrategy {
 				}
 			}
 		}
-		System.out.println("選擇排序法之掃描次數: " + totalTimes);
-		totalTimes = 0;
 	}
 
 	@Override
@@ -31,6 +30,13 @@ public class SelectionSort implements SortStrategy {
 		Comparable[] output = input.clone();
 		this.sort(output);
 		return output;
+	}
+
+	@Override
+	public String getScanTime() 
+	{
+		System.out.println("選擇排序法之掃描次數: " + totalTimes);
+		return null;
 	}
 
 }

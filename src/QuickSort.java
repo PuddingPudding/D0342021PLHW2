@@ -4,6 +4,7 @@ public class QuickSort implements SortStrategy
 	int totalTimes = 0;
 	private void quickSort(Comparable[] input , int left , int right)
 	{
+		totalTimes = 0;
 		if(left >= right)
 		{
 			return;
@@ -45,8 +46,6 @@ public class QuickSort implements SortStrategy
 	@Override
 	public void sort(Comparable[] input) {
 		this.quickSort(input, 0 , input.length-1);
-		System.out.println("快速排序法之掃描次數: " + totalTimes);
-		totalTimes = 0;
 	}
 
 	@Override
@@ -55,6 +54,13 @@ public class QuickSort implements SortStrategy
 		Comparable[] output = input.clone();
 		this.sort(output);
 		return output;
+	}
+
+	@Override
+	public String getScanTime() 
+	{
+		System.out.println("快速排序法之掃描次數: " + totalTimes);
+		return null;
 	}
 
 }

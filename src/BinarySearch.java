@@ -8,7 +8,7 @@ public class BinarySearch implements SearchStrategy
 		if(array.length != 0)
 		{
 			boolean searchFlag = false;
-			while(i != middle && !searchFlag)
+			do
 			{
 				middle = (i+j)/2;
 				if(array[i].compareTo(target) == Comparable.SAME)
@@ -37,7 +37,7 @@ public class BinarySearch implements SearchStrategy
 						i = middle;
 					}
 				}
-			}
+			}while(i+1 < j && !searchFlag);
 		}
 		return output;
 	}
