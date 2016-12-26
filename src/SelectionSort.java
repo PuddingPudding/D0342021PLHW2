@@ -35,8 +35,7 @@ public class SelectionSort implements SortStrategy {
 	@Override
 	public String getScanTime() 
 	{
-		System.out.println("選擇排序法之掃描次數: " + totalTimes);
-		return null;
+		return "選擇排序法之掃描次數: " + totalTimes;
 	}
 
 }

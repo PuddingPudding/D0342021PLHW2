@@ -39,6 +39,7 @@ public class SortArray
 	{
 		this.sort();
 		System.out.println("已完成搜尋前的排序動作");
+		this.printArray();
 		return this.searchStrategy.search(this.array , input);
 	}
 	
